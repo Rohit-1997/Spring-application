@@ -27,6 +27,7 @@ public class BookController {
 	
 	@GetMapping
 	public Iterable<String> getBooks() {
+		System.out.println("In book controller");
 		List<String> bookDetails = new ArrayList<>();
 		for (Book b: bookRepo.findAll()) {
 			bookDetails.add(b.getBookDetails());
